@@ -17,6 +17,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+  - task: UseDotNet@2
+  displayName: 'Use .NET Core SDK 3.1.100'
+  inputs:
+    packageType: sdk
+    version: 3.1.100
+    
   - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
     displayName: 'Write build info'
     workingDirectory: Tailspin.SpaceGame.Web/wwwroot
