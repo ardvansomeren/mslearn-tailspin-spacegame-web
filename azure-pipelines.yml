@@ -13,3 +13,8 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+
+  steps:
+    - script: 'echo "test" > test.txt'
+    displayName: 'Write build info'
+    workingDirectory: Tailspin.SpaceGame.Web/wwwroot
