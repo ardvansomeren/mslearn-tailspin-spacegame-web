@@ -34,5 +34,5 @@ steps:
       configuration: '$(buildConfiguration)'
 
   - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-  displayName: 'Write build info'
-  workingDirectory: Tailspin.SpaceGame.Web/wwwroot
+    displayName: 'Write build info'
+    workingDirectory: Tailspin.SpaceGame.Web/wwwroot
